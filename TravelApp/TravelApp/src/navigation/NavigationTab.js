@@ -1,12 +1,11 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { FontAwesome, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
-import HomeScreen from "../screens/HomeScreen";
+import { FontAwesome, Ionicons,MaterialIcons , MaterialCommunityIcons } from "@expo/vector-icons";
 import FavoriteScreen from "../screens/FavoriteScreen";
 import LocationScreen from "../screens/LocationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
-
+import HomeNavigation from "../navigation/NavigationStack/HomeNavigation";
 
 const Tab = createBottomTabNavigator()
 
@@ -30,7 +29,7 @@ export default function NavigationTab() {
 
                     else if (route.name === "Favorite") {
                         iconName = focused ? "favorite" : "favorite-outline";
-                        etiqueta = <MaterialCommunityIcons name={iconName} size={size} color={color} />;
+                        etiqueta = <MaterialIcons  name={iconName} size={size} color={color} />;
                     }
 
                     else if (route.name === "Profile") {
@@ -45,10 +44,12 @@ export default function NavigationTab() {
                 },
                 tabBarActiveTintColor: "tomato",
                 tabBarInactiveTintColor: "gray",
+               
+                
             })}>
 
-            <Tab.Screen name="Home" component={HomeScreen} options={{
-                tabBarLabel: '',
+            <Tab.Screen name="Home" component={HomeNavigation} options={{
+                tabBarLabel: "", headerShown: false,
             }} />
             <Tab.Screen name="Location" component={LocationScreen} options={{
                 tabBarLabel: '',
