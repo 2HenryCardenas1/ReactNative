@@ -2,10 +2,12 @@ import { View, Text } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { FontAwesome, Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
+
 import HomeScreen from "../screens/HomeScreen";
 import FavoriteScreen from "../screens/FavoriteScreen";
 import LocationScreen from "../screens/LocationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import SiteScreen from '../screens/SiteScreen';
 
 
 const Tab = createBottomTabNavigator()
@@ -29,7 +31,7 @@ export default function NavigationTab() {
                     }
 
                     else if (route.name === "Favorite") {
-                        iconName = focused ? "favorite" : "favorite-outline";
+                        iconName = focused ? "map-marker" : "map-marker-outline";
                         etiqueta = <MaterialCommunityIcons name={iconName} size={size} color={color} />;
                     }
 
@@ -59,6 +61,18 @@ export default function NavigationTab() {
             <Tab.Screen name="Profile" component={ProfileScreen} options={{
                 tabBarLabel: '',
             }} />
+            <Tab.Screen  
+                name="Site"
+                component={SiteScreen}
+                options={{
+                    title:"",
+                    headerTransparent:true,
+                tabBarLabel: "Detail Site",
+                tabBarIcon: ({ color, size }) => (
+                    <FontAwesome name="user-circle"  size={size} color={color} />
+                ),
+                }}
+              />
         </Tab.Navigator>
     )
 }
