@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import { API_HOST,API_SITES_BY_CATEGORY } from "../utils/constants";
+=======
+import { API_HOST } from "../utils/constants";
+>>>>>>> 88e164971423c6b993e18723664638001f72f0ce
 
 export async function getAllSitesApi() {
   try {
@@ -41,6 +45,7 @@ export async function getFilterSitesApi(name) {
     } catch (error) {
       throw error;
     }
+<<<<<<< HEAD
   }
 
 
@@ -54,3 +59,6 @@ export async function getFilterSitesApi(name) {
         throw error
     }
 }
+=======
+  }
+>>>>>>> 88e164971423c6b993e18723664638001f72f0ce

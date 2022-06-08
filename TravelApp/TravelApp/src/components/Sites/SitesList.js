@@ -66,7 +66,11 @@ const styles = StyleSheet.create({
   },
 
   name: {
+<<<<<<< HEAD
     color: "#B8A038",
+=======
+    color: "#fff",
+>>>>>>> 88e164971423c6b993e18723664638001f72f0ce
     fontWeight: "bold",
     fontSize: 15,
     paddingTop: 10,
