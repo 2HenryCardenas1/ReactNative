@@ -26,11 +26,12 @@ export default function SitesList(props) {
       <View style={styles.spacing}>
         <View style={styles.bgStyles}>
          
-          <Text style={styles.name}>{capitalize(item.name)}</Text>
           <Image source={{ uri: item.thumbnail }} style={styles.image} />
 
         </View>
       </View>
+      <Text style={styles.name}>{capitalize(item.name)}</Text>
+          
     </View>
   </TouchableWithoutFeedback>
   

@@ -48,7 +48,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView>
-      { /*  <HomeComponents category={category} loadCategories={loadCategories} /> */}
+       <HomeComponents category={category} loadCategories={loadCategories} /> 
      <SitesList sites={sites}/>
     </SafeAreaView>
   )
