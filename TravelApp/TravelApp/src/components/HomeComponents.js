@@ -12,10 +12,10 @@ export default function HomeComponents(props) {
     <FlatList
       horizontal
       showsHorizontalScrollIndicator={false}
+      keyExtractor={(category) => String(category.id)}
       data={category}
       numColumns={1}
       showsVerticalScrollIndicator={false}
-      keyExtractor={(category) => String(category.id)}
       renderItem={({ item }) => <CategoryCard category={item} />}
       contentContainerStyle={styles.container}
 
