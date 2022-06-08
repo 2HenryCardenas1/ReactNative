@@ -11,15 +11,8 @@ export default function Detail(props) {
         <>
             <View style={styles.container}>
 
-<<<<<<< HEAD
                 <View style={styles.item}>
                     <Text style={styles.title} >{capitalize(site.name)}</Text>
-=======
-
-
-                <View style={styles.item}>
-                    <Text style={styles.title} >{site.name}</Text>
->>>>>>> 88e164971423c6b993e18723664638001f72f0ce
                     <View style={styles.block}>
                         <View style={styles.blockInfo}>
                             <FontAwesome name="star" size={30} color={"#fe9345"} style={styles.icon} />
@@ -30,11 +23,7 @@ export default function Detail(props) {
                         </View>
 
                     </View>
-<<<<<<< HEAD
                     <Text style={styles.description} >{capitalize(site.description)} </Text>
-=======
-                    <Text style={styles.description} >Villa de Leyva es una ciudad colombiana en el noreste de Bogotá. Es conocida por sus edificios coloniales encalados, las calles con adoquines y la gran Plaza Mayor. En la plaza está la iglesia de Nuestra Señora del Rosario del siglo XVII y la Casa del </Text>
->>>>>>> 88e164971423c6b993e18723664638001f72f0ce
                 </View>
                 <View style={styles.button} >
                     <Text style={styles.textButton} >Ver Ruta</Text>
