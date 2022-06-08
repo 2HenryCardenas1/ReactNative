@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 5,
     padding: 10,
-    marginTop: Platform.OS === 'android' ? 100 : 0,
+    marginTop: 5
   
   },
   spinner: {

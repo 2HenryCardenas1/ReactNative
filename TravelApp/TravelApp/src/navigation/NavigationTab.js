@@ -59,8 +59,8 @@ export default function NavigationTab() {
             }} />
             <Tab.Screen name="Profile" component={ProfileScreen} options={{
                 tabBarLabel: '',
-            }} />
-            <Tab.Screen  
+            }} /> 
+            {/*<Tab.Screen  
                 name="Site"
                 component={SiteScreen}
                 options={{
@@ -71,7 +71,7 @@ export default function NavigationTab() {
                     <FontAwesome name="user-circle"  size={size} color={color} />
                 ),
                 }}
-              />
+            />*/}
         </Tab.Navigator>
     )
 }

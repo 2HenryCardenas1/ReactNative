@@ -15,7 +15,7 @@ export default function SitesListByCategory(props) {
       data={sites}
       numColumns={2}
       showsVerticalScrollIndicator={false}
-      keyExtractor={(sites) => String(sites.id)}
+      keyExtractor={(site) => String(site.id)}
       renderItem={({ item }) => <ListCardByCategory sites={item} />}
       contentContainerStyle={styles.container}
       /*onEndReached={isNext && loadSites}*/
