@@ -20,9 +20,6 @@ export default function HomeComponents(props) {
       contentContainerStyle={styles.container}
 
       onEndReachedThreshold={0.1}
-
-
-
     />
   )
 }
@@ -31,7 +28,8 @@ const styles = StyleSheet.create({
   container: {
     paddingHorizontal: 5,
     padding: 10,
-    marginTop: Platform.OS === 'android' ? 300 : 0,
+    marginTop: Platform.OS === 'android' ? 100 : 0,
+  
   },
   spinner: {
     marginTop: 20,

@@ -1,10 +1,10 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import React, { View, Text } from 'react-native'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import { FontAwesome, Ionicons,MaterialIcons , MaterialCommunityIcons } from "@expo/vector-icons";
 import FavoriteScreen from "../screens/FavoriteScreen";
 import LocationScreen from "../screens/LocationScreen";
 import ProfileScreen from "../screens/ProfileScreen";
+import SiteScreen from '../screens/SiteScreen';
 import HomeNavigation from "../navigation/NavigationStack/HomeNavigation";
 
 const Tab = createBottomTabNavigator()
@@ -60,6 +60,18 @@ export default function NavigationTab() {
             <Tab.Screen name="Profile" component={ProfileScreen} options={{
                 tabBarLabel: '',
             }} />
+            <Tab.Screen  
+                name="Site"
+                component={SiteScreen}
+                options={{
+                    title:"",
+                    headerTransparent:true,
+                tabBarLabel: "Detail Site",
+                tabBarIcon: ({ color, size }) => (
+                    <FontAwesome name="user-circle"  size={size} color={color} />
+                ),
+                }}
+              />
         </Tab.Navigator>
     )
 }
