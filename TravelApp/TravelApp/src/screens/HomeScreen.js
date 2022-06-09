@@ -1,10 +1,11 @@
-import { View, Text, SafeAreaView,StyleSheet } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet,ScrollView } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import HomeComponents from '../components/HomeComponents'
 import { getCategoriesApi } from '../api/categories';
 import { getAllSitesApi } from '../api/Site';
 import SitesList from '../components/Sites/SitesList';
 import SearchSite from "../components/Search/SearchSite"
+import Header from '../components/Home/Header';
 
 
 export default function HomeScreen() {
@@ -16,7 +17,7 @@ export default function HomeScreen() {
     (async () => {
       await loadCategories();
       await loadSites();
-    })(); 
+    })();
   }, []);
 
   const loadSites = async () => {
@@ -26,7 +27,7 @@ export default function HomeScreen() {
     } catch (error) {
       console.error(error);
     }
-  } 
+  }
 
   const loadCategories = async () => {
     try {
@@ -42,7 +43,7 @@ export default function HomeScreen() {
         });
       }
 
-      setcategory([...category,...categoryArray]);
+      setcategory([...category, ...categoryArray]);
     } catch (error) {
       console.error(error);
     }
@@ -50,21 +51,25 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView>
-      <SearchSite/>
-      <Text style={styles.textCat}>Categorias</Text>
-       <HomeComponents category={category} loadCategories={loadCategories} /> 
-       <Text style={styles.textCat}>Sitios</Text>
-     <SitesList sites={sites}/>
+   
+      <ScrollView style={styles.scrollView}>
+      <Header/>
+        <SearchSite />
+        <Text style={styles.textCat}>Categorias</Text>
+        <HomeComponents category={category} loadCategories={loadCategories} />
+        <Text style={styles.textCat}>Sitios</Text>
+        <SitesList sites={sites} />
+      </ScrollView>
     </SafeAreaView>
   )
 }
 const styles = StyleSheet.create({
-  textCat : {
+  textCat: {
     fontWeight: "bold",
-      fontSize: 20,
-      marginTop:15
+    fontSize: 20,
+    marginTop: 15
   },
-  
+
   textSite: {
     fontWeight: "bold",
     fontSize: 20,
