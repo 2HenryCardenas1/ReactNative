@@ -4,6 +4,9 @@ import HomeComponents from '../components/HomeComponents'
 import { getCategoriesApi } from '../api/categories';
 import { getAllSitesApi } from '../api/Site';
 import SitesList from '../components/Sites/SitesList';
+import SearchSite from "../components/Search/SearchSite"
+
+
 export default function HomeScreen() {
   const [category, setcategory] = useState([]);
   const [sites, setSites] = useState([]);
@@ -48,6 +51,7 @@ export default function HomeScreen() {
 
   return (
     <SafeAreaView>
+      <SearchSite/>
        <HomeComponents category={category} loadCategories={loadCategories} /> 
      <SitesList sites={sites}/>
     </SafeAreaView>
