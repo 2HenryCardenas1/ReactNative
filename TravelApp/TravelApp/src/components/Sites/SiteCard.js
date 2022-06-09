@@ -4,66 +4,57 @@ import {
   View,
   Text,
   Image,
+  ImageBackground,
   TouchableWithoutFeedback,
 } from "react-native";
 import { capitalize } from "lodash";
-import {useNavigation} from "@react-navigation/native";
+import { useNavigation } from "@react-navigation/native";
+
 
 export default function SiteCard(props) {
-   const { site } = props;
-   const navigation = useNavigation();
-   
-   const goToSite = () => {
-    navigation.navigate("SitesDetails", {id:site.id});
+  const { site } = props;
+  const navigation = useNavigation();
+
+  const goToSite = () => {
+    navigation.navigate("SitesDetails", { id: site.id });
   };
 
   return (
     <TouchableWithoutFeedback onPress={goToSite}>
-      <View style={styles.card}>
-        <View style={styles.spacing}>
-          <View style={styles.bgStyles}>
-            <Text style={styles.name}>{capitalize(site.name)}</Text>
-            <Image source={{ uri: site.thumbnail }} style={styles.image} />
-          </View>
-        </View>
+      <View style={styles.bgStyles}>
+        <ImageBackground source={{ uri: site.thumbnail }} resizeMode="cover" style={styles.image}>
+        </ImageBackground>
+        <Text style={styles.text}>{capitalize(site.name)}</Text>
+
       </View>
+
     </TouchableWithoutFeedback>
   );
 }
 
 const styles = StyleSheet.create({
-  card: {
-    flex: 1,
-    height: 130,
-  },
-  spacing: {
-    flex: 1,
-    padding: 5,
-  },
+ 
   bgStyles: {
     flex: 1,
-    borderRadius: 15,
-    padding: 10,
-    backgroundColor:"#FA6C6C"
+    borderRadius: 12,
+    backgroundColor: "#e2e2e2",
+    marginLeft:10,
+    marginBottom:20,
+    paddingBottom:10,
   },
-  number: {
-    position: "absolute",
-    right: 10,
-    top: 10,
-    color: "#fff",
-    fontSize: 11,
-  },
-  name: {
-    color: "#fff",
-    fontWeight: "bold",
-    fontSize: 15,
-    paddingTop: 10,
-  },
+  
   image: {
-    position: "absolute",
-    bottom: 2,
-    right: 2,
-    width: 50,
-    height: 50,
+    borderRadius: 15,
+    height:100,
+    flex: 1,
+    justifyContent: "center"
   },
+
+  text: {
+    marginTop:5,
+ marginLeft:7,
+    fontSize: 12,
+    justifyContent:"center",
+
+  }
 });

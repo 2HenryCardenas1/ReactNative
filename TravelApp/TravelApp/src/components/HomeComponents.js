@@ -10,17 +10,16 @@ export default function HomeComponents(props) {
 
   return (
     <FlatList
-      horizontal
-      showsHorizontalScrollIndicator={false}
-      keyExtractor={(category) => String(category.id)}
-      data={category}
-      numColumns={1}
-      showsVerticalScrollIndicator={false}
-      renderItem={({ item }) => <CategoryCard category={item} />}
-      contentContainerStyle={styles.container}
+    horizontal
+    showsHorizontalScrollIndicator={false}
+    keyExtractor={(category) => String(category.id)}
+    data={category}
+    numColumns={1}
+    renderItem={({ item }) => <CategoryCard category={item} />}
+    contentContainerStyle={styles.container}
 
-      onEndReachedThreshold={0.1}
-    />
+  />
+  
   )
 }
 
@@ -31,9 +30,6 @@ const styles = StyleSheet.create({
     marginTop: 5
   
   },
-  spinner: {
-    marginTop: 20,
-    marginBottom: 10
-  }
+  
 
 })

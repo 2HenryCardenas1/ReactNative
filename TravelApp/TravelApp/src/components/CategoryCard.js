@@ -17,8 +17,7 @@ export default function CategoryCard(props) {
     }
 
     return (
-
-        
+    
         <TouchableWithoutFeedback onPress={goToSiteByCategory}>
             <View style={styles.card}>
                 <View style={styles.spacing}>
@@ -36,7 +35,7 @@ export default function CategoryCard(props) {
 const styles = StyleSheet.create({
     card: {
         flex:1,
-        height: 130,
+        height: 70,
         width: 220,
     },
     spacing: {
@@ -50,8 +49,6 @@ const styles = StyleSheet.create({
         overflow: 'hidden',
     },
     name: {
-   
-       
         fontSize: 20,
         paddingTop: 15,
         marginBottom:10,
