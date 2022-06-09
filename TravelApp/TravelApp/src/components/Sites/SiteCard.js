@@ -21,40 +21,47 @@ export default function SiteCard(props) {
 
   return (
     <TouchableWithoutFeedback onPress={goToSite}>
-      <View style={styles.bgStyles}>
-        <ImageBackground source={{ uri: site.thumbnail }} resizeMode="cover" style={styles.image}>
-        </ImageBackground>
-        <Text style={styles.text}>{capitalize(site.name)}</Text>
+       <View style={styles.card}>
+                    <View style={styles.spacing}>
 
-      </View>
-
+                        <View style={styles.bgStyles}>
+                            <Image source={{ uri: site.thumbnail }} style={styles.image} />
+                            <Text style={styles.name}>{capitalize(site.name)}</Text>
+                           
+                        </View>
+                    </View>
+                </View>
     </TouchableWithoutFeedback>
   );
 }
 
 const styles = StyleSheet.create({
- 
-  bgStyles: {
-    flex: 1,
-    borderRadius: 12,
-    backgroundColor: "#e2e2e2",
-    marginLeft:10,
-    marginBottom:20,
-    paddingBottom:10,
+  card: {
+      flex: 1,
+      height: 180,
+      width: 200,
   },
-  
-  image: {
-    borderRadius: 15,
-    height:100,
-    flex: 1,
-    justifyContent: "center"
+  spacing: {
+      flex: 1,
+      padding: 5,
+      marginTop: 20
+  },
+  bgStyles: {
+      backgroundColor: '#ececeb',
+      minHeight: 150,
+      borderRadius:20,
+      overflow: 'hidden',
   },
 
-  text: {
-    marginTop:5,
- marginLeft:7,
-    fontSize: 12,
-    justifyContent:"center",
+  name: {
+      fontSize: 12,
+      paddingTop: 10,
+     
+  },
+  image: {
+      width: 190,
+      height: 80,
 
   }
-});
+
+})

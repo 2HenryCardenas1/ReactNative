@@ -57,10 +57,5 @@ const styles = StyleSheet.create({
 
     },
 
-    bgStyle: {
-        flex: 1,
-        backgroundColor: 'red',
-        borderRadius: 15,
-        padding: 10
-    }
+    
 })
