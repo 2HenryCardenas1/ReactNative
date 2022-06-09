@@ -14,8 +14,7 @@ export default function HomeNavigation() {
             <Stack.Screen name='Home' component={HomeScreen} options={{ title: "TravelApp", headerTransparent: true,tabBarShowLabel: true, }} />
             <Stack.Screen name='Categories' component={CategoriesScreen} options={{ title: "", headerTransparent: true,tabBarShowLabel: true, }} />
             <Stack.Screen name='Sites' component={SitesByCategoryScreen} options={{ title: "Lugares encontrados",tabBarShowLabel: true, }} />
-            <Stack.Screen name='SitesDetails' component={SiteScreen} options={{ title: "", headerTransparent: true,tabBarShowLabel: true, }} />
-
+           <Stack.Screen name="SitesDetails"  component={SiteScreen} options={{  title:"",headerTransparent:true }}  />
             
         </Stack.Navigator>
     )

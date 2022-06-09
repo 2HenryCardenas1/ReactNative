@@ -23,7 +23,6 @@ export default function HomeScreen() {
     try {
       const response = await getAllSitesApi();
       setSites(response.data);
-    
     } catch (error) {
       console.error(error);
     }
