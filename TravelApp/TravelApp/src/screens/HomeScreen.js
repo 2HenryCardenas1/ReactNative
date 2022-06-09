@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView } from 'react-native'
+import { View, Text, SafeAreaView,StyleSheet } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import HomeComponents from '../components/HomeComponents'
 import { getCategoriesApi } from '../api/categories';
@@ -51,8 +51,22 @@ export default function HomeScreen() {
   return (
     <SafeAreaView>
       <SearchSite/>
+      <Text style={styles.textCat}>Categorias</Text>
        <HomeComponents category={category} loadCategories={loadCategories} /> 
+       <Text style={styles.textCat}>Sitios</Text>
      <SitesList sites={sites}/>
     </SafeAreaView>
   )
 }
+const styles = StyleSheet.create({
+  textCat : {
+    fontWeight: "bold",
+      fontSize: 20,
+      marginTop:15
+  },
+  
+  textSite: {
+    fontWeight: "bold",
+    fontSize: 20,
+  }
+})

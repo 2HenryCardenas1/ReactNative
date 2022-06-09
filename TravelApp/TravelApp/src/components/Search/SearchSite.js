@@ -16,6 +16,7 @@ const styles = StyleSheet.create({
     card: {
         marginHorizontal: 20,
         marginTop: 130,
+        marginBottom:15
     },
     
     textInput: {
