@@ -1,4 +1,4 @@
-import { View, Text, SafeAreaView, StyleSheet,ScrollView } from 'react-native'
+import { View, Text, SafeAreaView, StyleSheet, ScrollView } from 'react-native'
 import React, { useState, useEffect } from 'react'
 import HomeComponents from '../components/HomeComponents'
 import { getCategoriesApi } from '../api/categories';
@@ -50,10 +50,11 @@ export default function HomeScreen() {
   };
 
   return (
-    <SafeAreaView>
-   
+
+    <SafeAreaView style={styles.container}>
+
       <ScrollView style={styles.scrollView}>
-      <Header/>
+        <Header />
         <SearchSite />
         <Text style={styles.textCat}>Categorias</Text>
         <HomeComponents category={category} loadCategories={loadCategories} />
@@ -64,9 +65,15 @@ export default function HomeScreen() {
   )
 }
 const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    marginLeft: "auto",
+    marginRight: "auto",
+    width: "88%",
+
+},
   textCat: {
-    fontWeight: "bold",
-    fontSize: 20,
+    fontSize: 22,
     marginTop: 15
   },
 

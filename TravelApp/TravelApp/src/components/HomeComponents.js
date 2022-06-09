@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
   },
   spinner: {
     marginTop: 20,
-    marginBottom: 60
+    marginBottom: 10
   }
 
 })

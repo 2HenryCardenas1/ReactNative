@@ -44,14 +44,14 @@ const styles = StyleSheet.create({
         padding: 10,
     },
     bgStyles: {
-        backgroundColor: '#FE934F',
+        backgroundColor: '#ede5e1',
         textAlign: 'center',
         borderRadius: 10,
         overflow: 'hidden',
     },
     name: {
-        color: "#fff",
-        fontWeight: "bold",
+   
+       
         fontSize: 20,
         paddingTop: 15,
         marginBottom:10,

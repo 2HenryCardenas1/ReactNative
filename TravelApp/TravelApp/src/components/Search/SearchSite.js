@@ -15,7 +15,7 @@ export default function SearchSite() {
 const styles = StyleSheet.create({
     card: {
         marginHorizontal: 20,
-        marginTop: 130,
+        marginTop: 20,
         marginBottom:15
     },
     
@@ -23,10 +23,10 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 20,
         paddingTop: 15,
-        textAlign: "center",
-        backgroundColor: '#e2e2e2',
+        paddingBottom:15,
+        paddingLeft: 15,
+        backgroundColor: '#eeeeee',
         borderRadius: 20,
-
-
+        
     }
 })
